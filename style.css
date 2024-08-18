@@ -1,23 +1,27 @@
-.myQrReader {
-    width: 450px;
+.frameQrReader {
+    width: 100%;
     /* Kích thước cố định mặc định */
 }
 
-/* @media (min-width: 576px) {
+.myQrReader {
+    width: 90%;
+}
+
+@media (min-width: 576px) {
     .myQrReader {
-        width: 150px;
+        width: 75%;
     }
 }
 
 @media (min-width: 768px) {
     .myQrReader {
-        width: 200px;
+        width: 75%;
     }
 }
 
 @media (min-width: 992px) {
     .myQrReader {
-        width: 250px;
+        width: 50%;
     }
 }
 
@@ -25,9 +29,4 @@
     .myQrReader {
         width: 600px;
     }
-} */
-
-.myQrReader video {
-    height: 100%;
-
 }
