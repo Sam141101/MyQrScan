@@ -1,0 +1,33 @@
+.myQrReader {
+    width: 450px;
+    /* Kích thước cố định mặc định */
+}
+
+/* @media (min-width: 576px) {
+    .myQrReader {
+        width: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    .myQrReader {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .myQrReader {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .myQrReader {
+        width: 600px;
+    }
+} */
+
+.myQrReader video {
+    height: 100%;
+
+}
