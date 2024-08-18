@@ -2,7 +2,6 @@ let html5QrCode = new Html5Qrcode("myQrReader");
 
 
 async function openScanCamera() {
-    util.replaceClassElement(".frameQrReader", "d-none", "d-flex", "one");
 
     const qrCodeSuccessCallback = (decodedText, decodedResult) => {
         /* handle success */
@@ -14,7 +13,8 @@ async function openScanCamera() {
 
     // If you want to prefer front camera
     // html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback);
-    html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+    html5QrCode.start({ facingMode: "environment" }, config, qrCodeSuccessCallback)
+    util.replaceClassElement(".frameQrReader", "d-none", "d-flex", "one");
 }
 
 
@@ -22,13 +22,7 @@ async function stopScanning() {
     // html5QrCode.stop({ facingMode: "environment" }, config, handleStopReader)
     html5QrCode.stop().then((ignore) => {
         // QR Code scanning is stopped.
-        const display = util.getElements(".frameQrReader")
-        display.style.display = "none"
-        const hide = util.getElements("#showQrReader")
-        hide.style.display = "block"
-
-
-        util.replaceClassElement(".frameQrReader", "d-block", "d-none", "one");
+        util.replaceClassElement(".frameQrReader", "d-flex", "d-none", "one");
     }).catch((err) => {
         // Stop failed, handle it.
     });
